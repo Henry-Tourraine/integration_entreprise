@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/weed2.png" />
+
+    <title>Karaoke</title>
+</head>
+<body>
+    <div>
+    <video src="./music/Gala - Freed From Desire KARAOKE-k9XLyAciAB0.mp4" controls></video>
+    <video src="./music/Karaoké J_t_emmène au vent - Louise Attaque _-1sNrbsk1yPU.mp4" controls></video>
+    <video src="./music/Tourner les serviettes - Patrick Sébastien (Lyrics Video - Karaoké)-gbTeQcEAcQY.mp4" controls></video>
+    <video src="./music/Tryo - Désolé pour hier soir - karaoké version-ZR0xhfgoJio.mp4" controls></video>
+    <video src="./music/partenaire.mp4" controls></video>
+</div>
+<div id="next">suivant</div>
+<script>
+    document.addEventListener("DOMContentLoaded", e=>{
+        let videos = document.querySelectorAll("video");
+        let flag = {set video(number){
+            [...videos][this.ideo].pause();
+                this.ideo = number;
+               
+                [...videos].map((e, index)=>{if(index == this.ideo){e.style.display = "block"}else{e.style.display = "none"}});
+                console.log(this.ideo);
+                        },
+    ideo: 0};
+    flag.video =0
+    window.addEventListener("click", e=>{
+      flag.video = (flag.ideo+1)%5
+  })
+
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/weed2.png" />
+    <title>MargueWeed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    *{
+        padding:0;
+        margin:0;
+        list-style: none;
+        font-family: 'Roboto', sans-serif;
+    }
+    /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(46, 45, 45);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(54, 173, 64);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(54, 173, 64);
+}
+    img:not(.logo, .title) {
+        border-radius: 50%;
+        max-width: 5em;
+    }
+
+    .logo, .title {
+        max-width: 8em;
+    }
+    #banner{
+        padding: 2em;
+        background: linear-gradient(rgb(65, 197, 65) 0%, rgb(26, 116, 74) 85%);
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+    }
+     #banner  ul {
+         display:flex;
+         flex-flow: wrap row;
+         margin: 0 1em
+
+     }
+     #banner ul li {
+         text-decoration: none;
+         list-style: none;
+         padding: 0.5em;
+     }
+    #product{
+        position: relative;
+min-height: 20em;
+display: flex;
+flex-flow: wrap row;
+justify-content: center;
+     }
+     #portable{
+         min-height: 10em;
+         text-align: center;
+         
+     }
+ 
+     .portable{
+         position: absolute;
+         top: 3em;
+         right: 10em;
+         border-radius: 10%;
+         overflow: hidden;
+min-width: 8em;
+min-height: 14em;
+
+border: solid black 6px;
+     }
+     .first{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background:  rgb(119, 173, 114);;
+         display: flex;
+         flex-flow: wrap row;
+         justify-content: center;
+         align-items: space-evenly;
+         
+     }
+     .first div{
+         position: absolute;
+         width: 40%;
+         background: rgb(255, 255, 255);
+         display: flex;
+         flex-flow: wrap column;
+         justify-content: center;
+         align-items: center;
+         padding: 0.2em 0;
+         margin: 0.3em 0;
+     }
+     .first li {
+        position: relative;
+         width: 70%;
+         height: 0.3em;
+         margin: 0.2em;
+         background: black; 
+         list-style: none;
+     }
+     .second{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background: rgb(40, 158, 56);
+         animation: slide 2.5s infinite alternate-reverse;
+     }
+     .screen{
+         width: 4em;
+         height: 4em;
+         margin-top: 5em;
+     }
+     .second{
+         display: flex;
+         flex-flow: wrap row;
+         justify-content: center;
+         align-items: center;
+     }
+.fa-check{
+    color: white;
+    font-size: 4em;
+}
+
+#guarantee{
+
+    min-height: 4em;
+    background:rgb(40, 158, 56);
+    display:flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    padding: 0.9em 0;
+    padding: 1em;
+
+}
+.icon i{
+    font-size: 2em;
+    color: white;
+} 
+.icon{
+    display: flex;
+    flex-flow: wrap column;
+
+}
+.customer{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    background: rgb(71, 69, 69);
+    padding: 2em;
+}
+.avis{
+    width: 30%;
+    position: relative;
+    padding: 3em;
+    background: rgba(124, 129, 123, 0.719);
+    border-radius: 5vw 5vw;
+ background: rgba(124, 129, 123, 0.719);
+ margin: 0.3em;
+}
+.avis p{
+    display: inline-block;
+}
+.avis p img{
+    position: relative;
+    border-radius: 50%;
+    width: 40em;
+    height: auto;
+
+}
+.avis .stars{
+    display: flex;
+    flex-flow: wrap row;
+    position: absolute;
+    top: 2em;
+    right: 3em;
+}
+.slash{
+    width: 5px;
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    height: 20em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: wrap row
+}
+.slash:before{
+    content:'';
+    background: rgb(65, 197, 65);
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    width: 10em;
+    
+}
+footer{
+    background: rgb(27, 27, 27);
+    display: flex;
+    flex-flow: wrap row;
+    padding: 0.7em 1em 4.4em 1em;
+    justify-content: space-around;
+    color: white;
+    font-size: 0.8em;
+}
+h3{
+    margin: 0.8em 0;
+    text-decoration: underline;
+}
+.logo{
+    max-width: 2em;
+    background: transparent;
+}
+#menu{
+    font-size: 2em;
+}
+#menu li:hover{
+color: rgb(163, 42, 211);
+cursor: pointer;
+}
+footer li:hover {
+color: rgb(163, 42, 211);
+cursor: pointer;
+}
+#scan{
+    position: absolute;
+    bottom: 0.5em;
+    width: 5em;
+    height: 5em;
+    background: grey;
+}
+#scan:after{
+    content:'';
+    width: 5em;
+    position: absolute;
+    top:0%;
+    height: 0.2em;
+    background:rgb(17, 234, 250);
+    animation: scan 1s infinite alternate-reverse;
+}
+
+#title2{
+    opacity: 1;
+    transform: translate(50%, 0);
+    animation: appear 1s ease-in-out;
+}
+
+footer #icon-menu ul{
+    display:flex;
+    flex-flow: wrap row;
+    
+}
+footer #icon-menu ul *{
+    display:flex;
+    flex-flow: wrap row;
+    margin: 0.2em;
+    
+}
+
+hr{
+    margin: 0.5em;
+}
+#roadmap{
+    position: relative;
+    width: 100%;
+    height: 40em;
+}
+
+#axis{
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 5px;
+    height: 100%;
+    background-color: rgb(65, 197, 65);
+    top: 0;
+}
+.wrapper{
+    border: solid rgb(54, 173, 64) 1px;
+    position: absolute;
+    border-radius: 1em 1em;
+    padding: 0.8em;
+}
+
+.date{
+    background: rgb(54, 173, 64);
+    color: white;
+    margin: 0.3em;
+    padding: 0.7em;
+    border-radius: 1em 1em;
+
+}
+.un{
+    top: 1em;
+    right:0; 
+    max-width: 20em;
+}
+.un:after{
+    content:'';
+    position: absolute;
+    width: 1em;
+    top:50%;
+    right: 11.1em;
+    transform: translate(0, -50%);
+    height: 0.9em;
+    background: rgb(54, 173, 64);
+}
+.deux{
+    top: 4em;
+    left:0;
+    max-width: 10em;
+}
+.deux:after{
+    content:'';
+    position: absolute;
+    width: 0.5em;
+    top:50%;
+    left: 11.6em;
+    transform: translate(0, -50%);
+    height: 0.9em;
+    background: rgb(54, 173, 64);
+}
+.trois{
+    top: 14em;
+    right: -6em;
+    max-width: 14em;
+}
+.trois:after{
+    content:'';
+    position: absolute;
+    width: 2em;
+    top:50%;
+    right: 15.6em;
+    transform: translate(0, -50%);
+    height: 0.9em;
+    background: rgb(54, 173, 64);
+}
+.quatre{
+    top: 20em;
+    left: -1em;
+    max-width: 10em;
+}
+.quatre:after{
+    content:'';
+    position: absolute;
+    width: 1em;
+    top:50%;
+    left: 11.6em;
+    transform: translate(0, -50%);
+    height: 0.9em;
+    background: rgb(54, 173, 64);
+}
+.cinq{
+    top: 28em;
+    right: 0;
+    max-width: 10em;
+}
+.cinq:after{
+    content:'';
+    position: absolute;
+    width: 0.5em;
+    top:50%;
+    right: 11.6em;
+    transform: translate(0, -50%);
+    height: 0.9em;
+    background: rgb(54, 173, 64);
+}
+
+@keyframes appear{
+    0%{opacity: 0; transform: translate(0, 0);}
+    100%{opacity: 1; transform: translate(50%, 0);}
+}
+.a{
+    opacity: 0;
+    transition: opacity 3.5s ease-in-out;
+}
+
+a:hover{
+    color: red;
+}
+@keyframes scan{
+    0%{top: 0%}
+    100%{top: 10em}
+}
+     @keyframes slide {
+         0%{left: 0%}
+         100%{left: 100%}
+     }
+</style>
+
+<body>
+    <div id="banner">
+        <img src="./img/margueweed-text.png" alt="title" class="title">
+        <ul id="menu">
+            <li>Accueil</li>
+            <li>L'application</li>
+            <li>shop</li>
+
+
+        </ul>
+  
+    </div>
+    <div id="product">
+        <div style="position:absolute; top: 50%; left:20%; transform: translate(-50%, -50%);max-width:30%">
+            <h2 id="title2">MargueWeed Scan'</h2>
+            MargueWeed vous offre accès à sa toute nouvelle application:
+            MargueWeed Scan'.<br\>
+            Avec MargueWeed c'est une toute nouvelle expérience des produits psychotropes qui s'offre à vous.
+            Son utilisation est simple. <br\> Lorsque vous vous apprêtez à consommer un produit vous pouvez le scanner
+            avec l'appli, que ce soit du liquide comme du solide, et MargueWeed scan' vous indique le nom du/des produits et indique leur quantité (pureté).
+            Emportez MargueWeed partout avec vous pour une consommation saine !
+        </div>
+        <div class="slash"></div>
+        <div id="portable">
+            <div class="portable">
+                <div class="first">
+                    <div>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </div>
+                   
+                    <img src="./img/weed2.png" alt="logo" class="screen">
+               
+                    <div id="scan"></div>
+                </div>
+                <div class="second">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="guarantee">
+       <div class="icon"> <i class="fa-solid fa-phone"></i>
+        <hr/>
+    Me téléphone pas, mec
+    </div>
+      <div class="icon">  <i class="fa-solid fa-thumbs-up"></i>
+        <hr/>
+        Statisfaction absolument <br/> pas garantie
+    </div>
+     <div class="icon">  <i class="fa-solid fa-dollar-sign"></i>
+        <hr/>
+    Prix prohibitifs
+    </div> 
+     <div class="icon">   <i class="fa-solid fa-lock"></i>
+        <hr/>
+        paiement non sécurisé
+     </div>
+    </div>
+   
+    <div class="customer">
+        <div class="avis">
+      
+    <p>
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <img src="./img/persons/bernard.jpg" alt="profile"> 
+        Cette application est vraiment géniale.
+        L'autre jour je suis tombé sur des plantes séchées en boîte,
+
+        je les ai scannées avec l'appli et elle m'a dit indiqué que l'herbe était de la boooooooooonnne.
+        Je me suis roulé un ...
+    </p></div>
+    <div class="avis right">
+      
+        <p>
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            
+        <img src="./img/persons/berte.jpg" alt="profile">
+    Etant moi-même consommatrice de drogues en tout genre, j'ai cherché longtemps pour une application comme
+MargueWeed. Son design soigné rend son utilisation extrêmement agréable ...</p></div>
+<div class="avis">
+      
+    <p>
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        
+    <img src="./img/persons/fabrice.jpg" alt="profile">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet cursus mollis.
+     Etiam felis purus, sodales sit amet egestas a, pharetra non augue.
+      Phasellus erat sapien, suscipit at pharetra sit amet, ultrices ac massa.
+       Morbi id blandit ante. Vestibulum tempus congue ipsum, id imperdiet erat dictum eget.
+     Integer fermentum auctor imperdiet. 
+     </p>
+     </div>
+     <div class="avis">
+     <p>
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        
+    <img src="./img/persons/huguette.jpg" alt="profile">
+    Donec ornare tellus in auctor tristique. Curabitur suscipit turpis et hendrerit ultrices. 
+    Sed eleifend risus lectus, ac porta ex aliquet a.. 
+     </p>
+    </div>
+    
+    </div>
+    <div id="roadmap">
+        <div id="axis"></div>
+        <div style="position: relative; margin: auto; width: 400px" class="a">
+        <div class="wrapper un">
+        <div class="date 1">1er août 2021</div>
+        <p>MargueWeed est crée</p>
+    </div>
+        <div class="wrapper deux">
+        <div class="date 2">5 octobre 2021</div>
+        <p>Une cagnotte Litchie est lancée pour lever des fonds sur le projet de l'application MargueWeed Scan'</p>
+    </div>
+        <div class="wrapper trois">
+        <div class="date 3">29 janvier 2022</div>
+<p>SnoopDog parle du projet et la cagnotte dépasse de 350% le plafond espéré !</p>
+    </div>
+        <div class="wrapper quatre">
+        <div class="date 4"> 3 mars 2022</div>
+        <p>La France, le monde, l'Univers et la Galaxie attendent la sortie de MargueWeed Scan'</p>
+    </div>
+        <div class="wrapper cinq">
+        <div class="date 5"> 1er juin 2022</div>
+        <p>Sortie de MargueWeed Scan'</p>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div>
+           <h3>Infos</h3> 
+            <ul>
+                <li>Livraison</li>
+                <li>Mentions légales</li>
+                <li>A propos</li>
+                <li>Qu'est-ce que la drogue</li>
+                <li>Paiement sécurisé</li>
+                <li>Nous contacter</li>
+            </ul>
+        </div>
+        <div>
+           <h3> Mon compte</h3>
+            <ul>
+                <li>Informations personnelles</li>
+                <li>Mes addresses</li>
+                <li>Mes commandes</li>
+                <li>Mes bons de réductions</li>
+                <li>Mes récompenses fidélité</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Le Blog</h3>
+            <ul>
+                <li>Blog</li>
+                <li>Symptômes</li>
+                <li>Légalité</li>
+                <a style="color:white; text-decoration: none" href="/weed/desktop.html">Desktop</a>
+            </ul>
+        </div>
+        <div>
+            <h3>Service client</h3>
+            <ul>
+                <li>Tél: +08 542 124 23</li>
+                <li>onestdejapartiaveclargent@margueweed.fr</li>
+            </ul>
+        </div>
+       
+        <div id="icon-menu">
+            Suivez-nous sur
+            <ul>
+                <li><img src="./img/logos/facebook.png" alt="logo" class="logo"></li>
+                <li><img src="./img/logos/instagram.png" alt="logos" class="logo"></li>
+                <li><img src="./img/logos/twiter.png" alt="logos" class="logo"></li>
+                <li><img src="./img/logos/youtube.png" alt="logos" class="logo"></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", e=>{
+        let lis = document.querySelectorAll("footer li");
+        console.log(lis);
+        [...lis].forEach(e2=>e2.addEventListener('click', (i)=>{
+            window.location.href = "./music/rick.mp4";
+        })
+        )
+        lis = document.querySelectorAll("#menu li");
+        console.log(lis);
+        [...lis].forEach(e2=>e2.addEventListener('click', (i)=>{
+            window.location.href = "./music/rick.mp4";
+        })
+        )
+        var options = {
+  root: document,
+  rootMargin: '0px',
+  threshold: 0.4
+}
+
+let a = document.querySelector(".a");
+function callback(entries, observer){
+entries.forEach(e=>{
+    a.style.opacity = 1;
+    console.log(entries[0].target)
+})
+}
+
+var observer = new IntersectionObserver(callback, options);
+        var target = document.querySelector('#roadmap');
+observer.observe(target);
+
+    })
+
+</script>
+</html>
